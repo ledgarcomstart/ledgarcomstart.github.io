@@ -1,16 +1,19 @@
 # Enable URL rewriting
 RewriteEngine On
-
-# Make sure the .htaccess file is being applied from the correct directory
 RewriteBase /
 
-# Hide .html extension from URLs
-# Example: /about.html → /about
+# --- Serve .html files without showing the extension ---
+# If the requested path (e.g. /enus) isn't a directory,
+# but a .html file with that name exists, serve it.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
 
-# Optional: Redirect requests that include .html to the clean version
-# Example: /about.html → /about
-RewriteCond %{THE_REQUEST} "\s/([^.]+)\.html[\s?]"
+# --- Redirect .html URLs to clean ones ---
+# e.g. /enus.html → /enus
+RewriteCond %{THE_REQUEST} "^[A-Z]{3,}\s([^.]+)\.html\s"
 RewriteRule ^ %1 [R=301,L]
+
+# --- Optional: force index.html to load on root ---
+# (Normally Apache does this automatically)
+DirectoryIndex index.html
