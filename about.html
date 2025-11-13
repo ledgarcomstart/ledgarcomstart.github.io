@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Educational guide: how to get started with Ledger Live and Ledger hardware wallets. Step-by-step setup, security best practices, and troubleshooting." />
+  <title>Getting Started — Ledger Devices & Ledger Live (Educational Guide)</title>
+  <style>
+    :root{
+      --bg:#f7f8fa;
+      --card:#ffffff;
+      --accent:#0a8f6b;
+      --muted:#6b7280;
+      --text:#111827;
+      --maxw:960px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, UI-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    .hero{background:linear-gradient(180deg,#06121a 0%, rgba(6,18,26,0.85) 100%);color:#fff;padding:48px 16px;text-align:center}
+    .container{max-width:var(--maxw);margin: -40px auto 48px; padding:28px;background:var(--card);box-shadow:0 8px 30px rgba(2,6,23,0.08);border-radius:12px;}
+    h1{margin:0 0 12px;font-size:28px;line-height:1.15;}
+    p.lead{margin:0 auto 18px;max-width:780px;color:#e6eef0;}
+    img.banner{width:100%;height:auto;border-radius:8px;margin-bottom:20px;display:block}
+    h2{color:#0b1720;margin-top:22px}
+    h3{margin-top:18px;color:#0b1720}
+    p{margin:12px 0;color:var(--muted)}
+    ul{margin:10px 0 18px 20px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+    footer{max-width:var(--maxw);margin:20px auto 60px;text-align:center;color:#9aa3ab;font-size:13px}
+    .disclaimer{background:#fff6f6;border:1px solid #ffdede;padding:12px;border-radius:8px;margin-bottom:18px;color:#7a2b2b}
+    @media (max-width:600px){
+      h1{font-size:22px}
+      .container{padding:18px;margin-top:-28px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Educational banner image (replace for your demo) -->
+  <div class="hero">
+    <h1>Getting Started with Ledger Devices & Ledger Live</h1>
+    <p class="lead">An independent, educational walkthrough showing how to initialize a hardware wallet, install Ledger Live, and follow essential security practices.</p>
+  </div>
+
+  <div class="container">
+    <img class="banner" src="https://i.postimg.cc/hnpZS9Gz/ledger-comstart.png" alt="Getting started banner">
+
+    <div class="disclaimer">
+      <strong>Educational notice:</strong> This page is an educational example only and is <strong>not affiliated</strong> with Ledger SAS or the official Ledger website. Do not enter private keys or recovery phrases on web pages. Always verify official resources independently.
+    </div>
+
+    <h2>What this guide covers</h2>
+    <p>This guide explains the safe, high-level steps for getting started with a hardware wallet and its companion software. Topics include downloading the official Ledger Live application, initializing a Ledger device, verifying authenticity, installing asset-specific apps, and applying best security practices.</p>
+
+    <h2>Why use a hardware wallet?</h2>
+    <p>Hardware wallets provide a secure environment for private keys by keeping them offline inside a dedicated secure element. This physical isolation reduces the risk of theft from malware, phishing, or compromised computers and phones. For anyone storing meaningful cryptocurrency, a hardware wallet is an effective tool for self-custody.</p>
+
+    <h2>Step 1 — Download Ledger Live (official source)</h2>
+    <p>Always obtain the companion software from the vendor’s verified download page. The official download page will use HTTPS and present a legitimate domain. Do not download Ledger Live or any wallet manager from unverified third-party links, social posts, or emails. After downloading, install the app for your platform (Windows, macOS, Linux) or install the official mobile app from the Apple App Store or Google Play Store.</p>
+
+    <h2>Step 2 — Unbox and inspect your hardware device</h2>
+    <p>When you receive a hardware wallet, inspect the packaging and the device for tamper-evidence. The unit should arrive sealed and include an instruction leaflet and recovery phrase cards. If anything looks suspicious — damaged seals, missing documentation, or unknown sellers — pause and contact the official vendor before proceeding.</p>
+
+    <h2>Step 3 — Initialize the device</h2>
+    <p>Power on the device and follow the on-screen prompts. Typical initialization steps:</p>
+    <ul>
+      <li>Choose to set up as a new device or restore from an existing recovery phrase.</li>
+      <li>Create a PIN code — this protects the device if it is lost or stolen.</li>
+      <li>Write down the displayed recovery phrase (usually 24 words) on the supplied backup sheet. Store this offline and secure.</li>
+    </ul>
+    <p><strong>Critical:</strong> Never enter your recovery phrase into a computer, phone, or website. The recovery phrase is the only way to restore access to your funds.</p>
+
+    <h2>Step 4 — Verify device authenticity</h2>
+    <p>Most reputable vendors provide a means to verify the device’s firmware and authenticity through their official software. After connecting the device to the desktop or mobile app, allow the app to perform its authenticity checks. If the app reports any issues or warnings, stop and consult official support channels.</p>
+
+    <h2>Step 5 — Install coin/asset apps</h2>
+    <p>Different blockchains typically require a small, dedicated app installed on the device (for example, Bitcoin or Ethereum). Open the companion software’s device or app manager and install only the apps you need. Apps can be removed and reinstalled without losing access to funds, since addresses are derived from your recovery phrase.</p>
+
+    <h3>Adding accounts</h3>
+    <p>After installing the necessary assets’ apps, add accounts inside the companion software to monitor balances and transactions. The software queries the blockchain for addresses associated with your device and displays balances without exposing private keys.</p>
+
+    <h2>Step 6 — Send and receive safely</h2>
+    <p>When sending funds, always confirm the recipient address and amount on the device screen before approving. This step prevents malware on your computer from altering transaction details. For receiving funds, verify the receive address shown in the app with the address displayed on your device.</p>
+
+    <h2>Staking, swaps, and extras</h2>
+    <p>Many companion apps now allow you to stake supported tokens, swap assets via integrated partners, and view NFTs. These actions still require on-device confirmation for any transaction that moves or delegates funds. Read platform-specific documentation to understand fees and lockup rules before staking.</p>
+
+    <h2>Firmware and software updates</h2>
+    <p>Keep device firmware and companion software up to date. Updates often include security improvements and new features. Always apply updates through the official application and never use unknown or third-party firmware. Before major firmware updates, ensure you have secure access to your recovery phrase in case device reinitialization is required.</p>
+
+    <h2>Security best practices</h2>
+    <ul>
+      <li>Store your recovery phrase offline in at least one secure location; consider multiple geographic backups.</li>
+      <li>Never share your recovery phrase or private keys — no legitimate support team will ever request them.</li>
+      <li>Use a strong device PIN and enable any available passphrase or advanced security options if you understand their implications.</li>
+      <li>Beware of phishing attempts: verify domain names, and do not click links in unsolicited emails.</li>
+      <li>Prefer hardware-backed backups (steel plates, secure safes) to paper where appropriate for long-term storage.</li>
+    </ul>
+
+    <h2>Troubleshooting common issues</h2>
+    <p>Common problems and simple checks:</p>
+    <ul>
+      <li>Device not recognized: try a different cable or USB port, ensure the device screen is unlocked and the correct app is open.</li>
+      <li>App install fails: check available device storage and remove unused apps if necessary.</li>
+      <li>Firmware update interrupted: reconnect the device and retry using the official app; if unsure, consult official support resources.</li>
+    </ul>
+    <p>If problems persist, always consult vendor support or verified community resources rather than sharing sensitive recovery details publicly.</p>
+
+    <h2>Understanding recovery and restoration</h2>
+    <p>If your device is lost, stolen, or damaged, you can restore access to your funds using the recovery phrase on a new compatible device. Practice caution: restoration is a sensitive operation — perform it only on trusted hardware in a secure environment.</p>
+
+    <h2>Privacy and operational security</h2>
+    <p>Using a hardware wallet enhances security but does not automatically provide anonymity. Consider privacy tools and good operational security (OPSEC) if you wish to reduce address linkage and on-chain traceability. Use new addresses for different purposes when appropriate and be mindful of metadata leakage through exchanges or third-party services.</p>
+
+    <h2>Further learning</h2>
+    <p>To expand your knowledge, read vendor documentation, community guides, and reputable security blogs. Practical exercises—like setting up a test wallet with small amounts—are useful to gain confidence before moving substantial funds.</p>
+
+    <h2>Final notes</h2>
+    <p>Hardware wallets, when used correctly, are one of the most reliable ways to keep cryptocurrency keys secure. The combination of an offline secure element, a strong recovery backup, and cautious daily habits significantly reduces many common risks faced by crypto users.</p>
+
+    <p style="text-align:center;margin-top:22px">
+      <a class="cta" href="#" onclick="alert('This is an educational demo. Visit official vendor pages directly for downloads.'); return false;">This is an educational demo — do not enter private data here</a>
+    </p>
+
+  </div>
+
+  <footer>
+    <p>Educational example — not affiliated with Ledger SAS. Always verify official domains and avoid sharing private keys or recovery phrases online.</p>
+  </footer>
+
+</body>
+</html>
